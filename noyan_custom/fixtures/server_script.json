@@ -1,0 +1,21 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Insert",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-07-11 10:55:57.388916",
+  "module": "Noyan Custom",
+  "name": "LOM sales order",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Sales Order",
+  "script": "# =============================================================================\r\n# Noyan LOM (v3) — copy LOM data from Quotation -> Sales Order\r\n# Server Script:\r\n#   Script Type       = Document Event\r\n#   Reference DocType = Sales Order\r\n#   DocType Event     = Before Insert\r\n#   Enabled\r\n# Paste the body below (everything under this comment block).\r\n# =============================================================================\r\n\r\nFIELDMAP = {\r\n    \"custom_lom_floors\": [\"floor_name\"],\r\n    \"custom_lom_spaces\": [\"floor\", \"space\"],\r\n    \"custom_lom_categories\": [\"category\", \"total_qty\", \"cell_data\"],\r\n    \"custom_lom_products\": [\"item_code\", \"item_name\", \"description\",\r\n                            \"total_qty\", \"cell_data\"],\r\n}\r\n\r\nsource_quotation = None\r\nif doc.items:\r\n    source_quotation = doc.items[0].get(\"prevdoc_docname\")\r\n\r\nif source_quotation:\r\n    src = frappe.get_doc(\"Quotation\", source_quotation)\r\n    if not doc.get(\"custom_list_type\"):\r\n        doc.custom_list_type = src.get(\"custom_list_type\")\r\n    for table_field, cols in FIELDMAP.items():\r\n        if doc.get(table_field):\r\n            continue\r\n        for r in src.get(table_field):\r\n            doc.append(table_field, {c: r.get(c) for c in cols})",
+  "script_type": "DocType Event"
+ }
+]

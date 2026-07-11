@@ -1,0 +1,204 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:project_name",
+ "creation": "2026-07-06 14:52:14.414860",
+ "custom": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_i56s",
+  "section_break_qgri",
+  "project_name",
+  "customer",
+  "project_type",
+  "status",
+  "schedule_section",
+  "start_date",
+  "expected_end_date",
+  "actual_end_date",
+  "details_section",
+  "city",
+  "building_type",
+  "number_of_floors",
+  "total_area",
+  "column_break_hf3o",
+  "address",
+  "geolocation",
+  "contacts_people",
+  "project_contacts",
+  "section_break_z5jo",
+  "commercial_section",
+  "estimated_value",
+  "sales_person",
+  "description_section",
+  "project_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_i56s",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_qgri",
+   "fieldtype": "Column Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_type",
+   "fieldtype": "Select",
+   "label": "Project Type",
+   "options": "Residential\nCommercial\nOffice\nHotel\nIndustrial"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nOn Hold\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Column Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "expected_end_date",
+   "fieldtype": "Date",
+   "label": "Expected End Date"
+  },
+  {
+   "fieldname": "actual_end_date",
+   "fieldtype": "Date",
+   "label": "Actual End Date"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "building_type",
+   "fieldtype": "Data",
+   "label": "Building Type"
+  },
+  {
+   "fieldname": "number_of_floors",
+   "fieldtype": "Int",
+   "label": "Number of Floors"
+  },
+  {
+   "fieldname": "total_area",
+   "fieldtype": "Float",
+   "label": "Total Area"
+  },
+  {
+   "fieldname": "column_break_hf3o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Geolocation",
+   "label": "Geolocation"
+  },
+  {
+   "fieldname": "contacts_people",
+   "fieldtype": "Section Break",
+   "label": "Contacts & People"
+  },
+  {
+   "fieldname": "project_contacts",
+   "fieldtype": "Table",
+   "label": "Project Contacts",
+   "options": "Project Contact Link"
+  },
+  {
+   "fieldname": "section_break_z5jo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commercial_section",
+   "fieldtype": "Column Break",
+   "label": "Commercial"
+  },
+  {
+   "fieldname": "estimated_value",
+   "fieldtype": "Currency",
+   "label": "Estimated Value"
+  },
+  {
+   "fieldname": "sales_person",
+   "fieldtype": "Link",
+   "label": "Sales Person",
+   "options": "Sales Person"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Column Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "project_description",
+   "fieldtype": "Text Editor",
+   "label": "Project Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-07-07 12:52:18.219398",
+ "modified_by": "Administrator",
+ "module": "Noyan Custom",
+ "name": "Customer Projects",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
