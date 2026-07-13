@@ -1,0 +1,89 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2026-06-23 15:01:33.966731",
+  "name": "Commercial Manager",
+  "role_profile": "Commercial Manager",
+  "roles": [
+   {
+    "role": "Delivery Manager"
+   },
+   {
+    "role": "Delivery User"
+   },
+   {
+    "role": "Item Manager"
+   },
+   {
+    "role": "Purchase Manager"
+   },
+   {
+    "role": "Purchase User"
+   },
+   {
+    "role": "Sales User"
+   },
+   {
+    "role": "Stock Manager"
+   },
+   {
+    "role": "Stock User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2026-06-23 15:02:44.636004",
+  "name": "Sales User",
+  "role_profile": "Sales User",
+  "roles": [
+   {
+    "role": "Sales User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2026-06-23 15:03:44.012655",
+  "name": "Sales Manager",
+  "role_profile": "Sales Manager",
+  "roles": [
+   {
+    "role": "Sales User"
+   },
+   {
+    "role": "Sales Manager"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2026-06-23 15:12:53.526759",
+  "name": "Accounts Manager",
+  "role_profile": "Accounts Manager",
+  "roles": [
+   {
+    "role": "Accounts Manager"
+   },
+   {
+    "role": "Accounts User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Role Profile",
+  "modified": "2026-06-23 15:13:23.312660",
+  "name": "Accounts User",
+  "role_profile": "Accounts User",
+  "roles": [
+   {
+    "role": "Accounts User"
+   }
+  ]
+ }
+]
